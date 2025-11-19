@@ -27,3 +27,19 @@ waydroid session start
 ```
 waydroid show-full-ui
 ```
+
+# Get Waydroid to work through a VM
+```
+nano /var/lib/waydroid/waydroid.cfg
+```
+
+thêm vào 
+```
+ro.hardware.gralloc=default
+ro.hardware.egl=swiftshader
+```
+
+áp dụng 
+```
+sudo waydroid upgrade -o
+```
