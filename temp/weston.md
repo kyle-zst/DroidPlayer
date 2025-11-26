@@ -15,5 +15,5 @@ sudo dnf install -y \
 
 ### Build vnc weston
 ```
-meson setup build   --prefix=/usr   -Dbackend-vnc=true   -Dbackend-headless=true   -Dbackend-drm=true   -Dbackend-wayland=false   -Dbackend-x11=false   -Dsystemd=false   -Dpipewire=false   -Dremoting=false   -Dcolor-management-lcms=false   -Ddemo-clients=false -Drenderer-vulkan=false -Dbackend-rdp=false -Dxwayland=false -Dshell-lua=false
+meson setup build -Dbackend-drm=true -Dbackend-wayland=true -Dbackend-x11=true -Dbackend-headless=true -Dbackend-vnc=true -Dbackend-pipewire=false -Dbackend-rdp=false -Drenderer-gl=true -Drenderer-vulkan=false -Dxwayland=true -Dshell-desktop=true -Dshell-kiosk=true -Dshell-lua=false -Dshell-ivi=false -Dtools=info -Dtools=terminal -Ddemo-clients=false -Dsimple-clients=shm -Dsimple-clients=egl -Dtests=false -Ddoc=false
 ```
