@@ -1,5 +1,17 @@
 # Setup Waydroid 
 
+### Fedora
+```
+sudo dnf install waydroid
+```
+
+### Ubuntu
+```
+sudo apt install curl ca-certificates -y
+curl -s https://repo.waydro.id | sudo bash
+sudo apt install waydroid -y
+```
+
 ## Tải img
 
 ```
@@ -30,7 +42,7 @@ waydroid show-full-ui
 
 # Get Waydroid to work through a VM
 ```
-nano /var/lib/waydroid/waydroid.cfg
+sudo nano /var/lib/waydroid/waydroid.cfg
 ```
 
 thêm vào 
