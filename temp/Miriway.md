@@ -12,5 +12,5 @@ sudo snap install ubuntu-frame-vnc && sudo snap connect ubuntu-frame-vnc:wayland
 
 ### Start VNC
 ```
-miriway.vnc-server
+miriway.vnc-server --shell-component '' 
 ```
