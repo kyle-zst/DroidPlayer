@@ -1,2 +1,2 @@
 # DroidPlayer
-Anddroid gaming on Linux
+Android gaming on Linux
