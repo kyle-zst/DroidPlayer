@@ -14,3 +14,11 @@ sudo snap install ubuntu-frame-vnc && sudo snap connect ubuntu-frame-vnc:wayland
 ```
 miriway.vnc-server --shell-component '' 
 ```
+
+## Tạo màn hình không UI
+
+Chạy lệnh thực thi trong `example-configs` của `Miriway` là được. 
+Sau đó sửa config của `sway` trong 
+```
+$HOME/.config/miriway-shell.config
+```
