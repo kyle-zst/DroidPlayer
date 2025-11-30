@@ -12,7 +12,7 @@ sudo snap install ubuntu-frame-vnc && sudo snap connect ubuntu-frame-vnc:wayland
 
 ### Start VNC
 ```
-miriway.vnc-server --shell-component '' 
+miriway.vnc-server
 ```
 
 ## Tạo màn hình không UI
