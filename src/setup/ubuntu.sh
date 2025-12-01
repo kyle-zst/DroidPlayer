@@ -58,9 +58,14 @@ if [ "$VM_MODE" = true ]; then
   CONFIG_FILE="/var/lib/waydroid/waydroid.cfg"
   
   if [ -f "$CONFIG_FILE" ]; then
-    # Add VM properties after [properties] line
-    sudo sed -i '/^\[properties\]/a ro.hardware.gralloc=default\nro.hardware.egl=swiftshader' "$CONFIG_FILE"
-    echo "VM properties added to $CONFIG_FILE"
+    # Check if VM properties already exist
+    if ! grep -q "ro.hardware.gralloc=default" "$CONFIG_FILE"; then
+      # Add VM properties after [properties] line
+      sudo sed -i '/^\[properties\]/a ro.hardware.gralloc=default\nro.hardware.egl=swiftshader' "$CONFIG_FILE"
+      echo "VM properties added to $CONFIG_FILE"
+    else
+      echo "VM properties already exist in $CONFIG_FILE, skipping..."
+    fi
     
     echo "=== Running waydroid upgrade ==="
     sudo waydroid upgrade -o
